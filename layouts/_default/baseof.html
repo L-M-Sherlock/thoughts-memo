@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body
+  data-theme="{{- if .Site.Params.defaultTheme -}}{{ .Site.Params.defaultTheme }}{{- else -}}auto{{- end -}}"
+  data-theme-auto='{{- if ne .Site.Params.defaultTheme "auto" -}}false{{- else -}}true{{- end -}}'
+  >
+    {{ partial "scripts-front.html" . }}
+    {{ partial "header.html" . }}
+
+    <main>
+        <div class="container-lg clearfix">
+            <!-- list -->
+            <div class="col-12 col-md-9 float-left content">
+                {{ block "main" . }}{{ end }}
+            </div>
+            {{ partial "sidebar.html" . }}
+        </div>
+        {{ partial "components.html" . }}
+    </main>
+
+    {{ partial "footer.html" . }}
+    {{ partial "scripts-end.html" . }}
+    {{ partial "head-withorbit.html" . }}
+</body>
+
+</html>

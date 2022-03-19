@@ -1,0 +1,24 @@
+# ide config
+.idea/
+
+themes/
+
+# output
+public/
+resources/
+
+# system
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+.hugo_build.lock
