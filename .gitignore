@@ -1,8 +1,6 @@
 # ide config
 .idea/
 
-themes/
-
 # output
 public/
 resources/
