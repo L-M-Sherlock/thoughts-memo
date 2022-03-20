@@ -50,10 +50,10 @@ sourceURL = "https://github.com/L-M-Sherlock/githubpages_withorbit"
 
 # Word counter and read time indicator in post metadata
 showWordCounter = true
-showReadTime = false
+showReadTime = true
 
 # License in the footer
-showLicenseInFooter = false
+showLicenseInFooter = true
 
 # License at the end of each post
 showLicense = true
@@ -79,8 +79,8 @@ licenseLink = "http://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 # Comments
 # utterances, see: https://utteranc.es/
-# utterancesRepo = "*/*"
-# utterancesIssueTerm = "pathname"
+utterancesRepo = "L-M-Sherlock/githubpages_withorbit"
+utterancesIssueTerm = "pathname"
 
 # Disqus, see: https://disqus.com/admin/install/platforms/universalcode/
 # disqusShortname = "*********"
