@@ -29,7 +29,7 @@ showToc = true
 对于不熟悉「间隔重复」的读者，本文会帮你克服那些常见的、让你从入门到放弃的阻碍；对于有经验的读者，后续章节会涵盖不常见的一些编卡理念，以加深你的 SRS 实践[2]。我们讨论的东西概括性较强，主要集中在制卡的纲领层面，因此无论你用什么
 具体的 SR 系统，相信都有所受益。
 
-## 「提取练习」—— SRS的核心
+## 「提取练习」—— SRS 的核心
 
 卡片的具体应用有很多，但编写卡片时最好记住，不管表面如何，你正在给未来的自己编制任务，一个重复再重复的任务。因此请牢牢记住，「设计卡片」即「设计任务」。
 
@@ -50,13 +50,13 @@ SRS 的设计目的便是实现测试效应。如果想用它强化某方面的�
 {{< withorbit >}}
 
 <orbit-prompt 
-question="SR卡片通过[...]练习加强你的记忆（一个认知科学的词汇）"
+question="SR 卡片通过[……]练习加强你的记忆（一个认知科学的词汇）"
 answer="提取"
 > </orbit-prompt>
 
 <orbit-prompt 
 question="提取练习vs反复阅读，你的行为上有哪些不同？"
-answer="提取联系会对信息进行更多的主动回忆"
+answer="提取练习会对信息进行更多的主动回忆"
 > </orbit-prompt>
 
 <orbit-prompt 
@@ -65,7 +65,7 @@ answer="它的目的在于产生学习，而不是评估学习"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="概括来说，写SRS卡片相当于给未来的自己一个不断重复的[...]"
+question="概括来说，写SRS卡片相当于给未来的自己一个不断重复的[……]"
 answer="任务"
 > </orbit-prompt>
 
@@ -107,12 +107,12 @@ SR 卡片的制作与文章翻译颇为相似。当知识的细节「完全载�
 {{< withorbit >}}
 
 <orbit-prompt 
-question="细节太多，卡片倾向于[...]你的注意力"
+question="细节太多，卡片倾向于[……]你的注意力"
 answer="麻痹"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="含糊的问题将会引出[...]的答案"
+question="含糊的问题将会引出[……]的答案"
 answer="含糊"
 > </orbit-prompt>
 
@@ -132,17 +132,17 @@ answer="范围紧密的卡片允许难易不同的知识点对应不同的重复
 > </orbit-prompt>
 
 <orbit-prompt 
-question="精准：太多细节的卡片倾向于激发[...]的提取"
+question="精准：太多细节的卡片倾向于激发[……]的提取"
 answer="不完全"
 > </orbit-prompt>
 
 <orbit-prompt 
 question="为何不能让你从卡面直接推断出答案？"
-answer="提取联系依赖从记忆中回忆答案。"
+answer="提取练习依赖从记忆中回忆答案。"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="（本指南的）有效卡片的属性：[...]、精准、一致、可控、费功夫"
+question="（本指南的）有效卡片的属性：[……]、精准、一致、可控、费功夫"
 answer="聚焦"
 > </orbit-prompt>
 
@@ -264,7 +264,7 @@ answer="因为它只关心一个细节"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="对事实性卡片，你经常增添有关[...]"
+question="对事实性卡片，你经常增添有关[……]"
 answer="为何它是真的"
 > </orbit-prompt>
 
@@ -415,7 +415,7 @@ answer="允许你不加回忆地推断问题"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="精细编码：如果你可以让信息[...]，信息会更容易回忆。"
+question="精细编码：如果你可以让信息[……]，信息会更容易回忆。"
 answer="与其他记忆产生联系"
 > </orbit-prompt>
 
@@ -425,7 +425,7 @@ answer="编一个助记词"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="给卡片中的文本增加/替换[...]，可以引发精细编码"
+question="给卡片中的文本增加/替换[……]，可以引发精细编码"
 answer="图像"
 > </orbit-prompt>
 
@@ -486,7 +486,7 @@ answer="将它制成卡片"
 {{< withorbit >}}
 
 <orbit-prompt 
-question="好的卡片常常涉及[...]：摘取没有明确写出来的信息。"
+question="好的卡片常常涉及[……]：摘取没有明确写出来的信息。"
 answer="再解读"
 > </orbit-prompt>
 
@@ -506,7 +506,7 @@ answer="年，数十，秒"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="增加大量卡片不仅有时间开销，还有[...]开销"
+question="增加大量卡片不仅有时间开销，还有[……]开销"
 answer="情绪"
 > </orbit-prompt>
 
@@ -600,7 +600,7 @@ answer="你已内化过的概念尺度大小（aka「组块大小」）"
 {{< withorbit >}}
 
 <orbit-prompt 
-question="「简单程序」中的步骤可以像[...]类知识那样对待，从而机械地转成一套卡组"
+question="「简单程序」中的步骤可以像[……]类知识那样对待，从而机械地转成一套卡组"
 answer="清单"
 > </orbit-prompt>
 
@@ -781,17 +781,17 @@ Q：平行四边形怎么才像方形？A：全部四边两两平行"
 > </orbit-prompt> -->
 
 <orbit-prompt 
-question="写一张关于概念的[...]，然后问：为什么这个概念很重要？"
+question="写一张关于概念的[……]，然后问：为什么这个概念很重要？"
 answer="意义和影响"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="意义和影响：写卡使得概念具有[...]。"
+question="意义和影响：写卡使得概念具有[……]。"
 answer="个人意义"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="写概念性卡片的五种视角（本指南的）：[...]，异同点，局部vs整体，因果，意义和影响。"
+question="写概念性卡片的五种视角（本指南的）：[……]，异同点，局部vs整体，因果，意义和影响。"
 answer="特性于倾向"
 > </orbit-prompt>
 
@@ -894,7 +894,7 @@ answer="特性于倾向"
 
 > 问：请说出你可能尝试用鸡肉高汤制作的蔬菜浓汤（不允许和以前的答案重复）
 >
-> 答：e.g. 土豆、防风草、芹菜、苏子、莎草、南瓜、胡萝卜、胡椒、扁豆......
+> 答：e.g. 土豆、防风草、芹菜、苏子、莎草、南瓜、胡萝卜、胡椒、扁豆…………
 
 「不允许和以前的答案重复」这是个很有意思的小把戏，尽管过一两年可能还是会重复（这可以接受）。我要说的重点在于，一开始就概括了应用场景的问题很难写。换句话说，你得写卡前就知道高汤怎么用，这是要一定烹饪经验的。
 
@@ -916,7 +916,7 @@ answer="Tags"
 
 <orbit-prompt 
 question="对于开放式清单，三种有用的卡片类型：
-1. [...]
+1. [……]
 2. 关于Tag自身的
 3. 链接Tag到实例的"
 answer="链接实例到Tag的"
@@ -933,7 +933,7 @@ answer="你每次都要给一个新答案，而不是按记忆作答。"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="仅当你[...]时，它才是一张创意卡。"
+question="仅当你[……]时，它才是一张创意卡。"
 answer="生成很多不同回答"
 > </orbit-prompt>
 
@@ -966,7 +966,7 @@ answer="生成任何新答案时，一直都用到的知识。"
 
 > 问：请说出你可能尝试用鸡肉高汤制作的蔬菜浓汤（不允许和以前的答案重复）
 >
-> 答：e.g. 土豆、防风草、芹菜、苏子、莎草、南瓜、胡萝卜、胡椒、扁豆......
+> 答：e.g. 土豆、防风草、芹菜、苏子、莎草、南瓜、胡萝卜、胡椒、扁豆…………
 
 这些卡片旨在「提示」而非对答案的「传授」，从而尝试激发新的灵感或者创造新的行为。从这个角度看，SR 卡让这些 idea 长久保持了「凸显」，让人对相关内容保持敏感，直到遇到机会，将自己生活中有意义的事物与其联系起来。就像[经济学家布拉德-德隆（Brad DeLong）认为](https://notes.andymatuschak.org/z39D31syJUE1gtNTREogSZiG6LDSuwygN5NDt)的那样，SR 卡在复习环节和世俗版的「教理问答*」惊人地相似（*译注：教理问答 —— 一种宗教教育的教材，形式上也是问答体。通过问答来潜移默化地记住、思考、理解。）
 
@@ -985,7 +985,7 @@ answer="生成任何新答案时，一直都用到的知识。"
 {{< withorbit >}}
 
 <orbit-prompt 
-question="选择性注意：我们更倾向于主义此类事件的发生：当它高度[...]时。"
+question="选择性注意：我们更倾向于主义此类事件的发生：当它高度[……]时。"
 answer="显著"
 > </orbit-prompt>
 
@@ -1005,7 +1005,7 @@ answer="卡片可以通过保持idea的显著，延长这个现象"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="如果可能，围绕[...]制作启明卡。"
+question="如果可能，围绕[……]制作启明卡。"
 answer="对你而言，idea有潜在意义的情景"
 > </orbit-prompt>
 
@@ -1058,7 +1058,7 @@ answer="一些作为「下层建筑」的基本细节"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="如果写卡时你察觉到亠种强迫感，提醒自己[...]"
+question="如果写卡时你察觉到亠种强迫感，提醒自己[……]"
 answer="「以后总能写更多的。」"
 > </orbit-prompt>
 
@@ -1128,7 +1128,7 @@ answer="没包括充分的上下文。"
 > </orbit-prompt>
 
 <orbit-prompt 
-question="提取练习的卡片必须明确，排除[...]答案。"
+question="提取练习的卡片必须明确，排除[……]答案。"
 answer="替代性的正确"
 > </orbit-prompt>
 
