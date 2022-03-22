@@ -7,3 +7,5 @@
 未来会尝试将一些知识类博客转化为助记媒介。
 
 访问地址：https://l-m-sherlock.github.io/githubpages_withorbit/
+
+介绍&教程：https://zhuanlan.zhihu.com/p/484118458
