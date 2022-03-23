@@ -1,10 +1,9 @@
-+++
-title = "内嵌 Orbit 测试"
-date = 2022-03-19T00:00:00+08:00
-description = "一个简单的内嵌卡片测试"
-tags = ["test"]
-showToc = false
-+++
+---
+title: "内嵌 Orbit 测试"
+date: 2022-03-19T00:00:00+08:00
+description: "一个简单的内嵌卡片测试"
+tags: ["test"]
+---
 
 简单测试一下Orbit能不能在GitHubPage上显示。
 
