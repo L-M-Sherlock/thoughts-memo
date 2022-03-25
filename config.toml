@@ -65,7 +65,7 @@ copyrightStartYear = "2022"
 # Open Graph & Twitter Card variables
 # You can also set description and images in post front matter individually
 description = "Introduce spaced repetition via mnemonic medium."
-og = "/og.png"                                          # This will use the image called og.png in static/img folder
+og = "/githubpages_withorbit/og.png"                                          # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
 mainSections = ["post"]
