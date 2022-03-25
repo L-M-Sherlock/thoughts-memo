@@ -1,5 +1,5 @@
 baseURL = "https://l-m-sherlock.github.io/githubpages_withorbit/"
-title = "Test Orbit in Hugo"
+title = "Spaced Repetition in Mnemonic Medium"
 
 theme = "fuji"
 hasCJKLanguage = true
@@ -32,7 +32,7 @@ post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 
 [params]
 author = "Jarrett Ye"                # You can also set author in post front matter individually
-subTitle = "探索助记媒介"
+subTitle = "用助记媒介，介绍间隔重复！"
 defaultTheme = "auto"              # default theme when first visit (auto|dark|light)
 
 # Source URL of the website, will appear in the footer
@@ -60,12 +60,12 @@ showLicense = true
 showToc = true
 
 # Copyright
-copyrightStartYear = "2020"
+copyrightStartYear = "2022"
 
 # Open Graph & Twitter Card variables
 # You can also set description and images in post front matter individually
-description = "A minimal Hugo theme with nice theme color."
-og = "/img/og.png"                                          # This will use the image called og.png in static/img folder
+description = "Introduce spaced repetition via mnemonic medium."
+og = "/og.png"                                          # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
 mainSections = ["post"]
