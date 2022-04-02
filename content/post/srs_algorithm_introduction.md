@@ -375,9 +375,119 @@ S 的大小与遗忘曲线之间的联系，可以从下图中得出：
 
 ### 记忆三变量模型
 
+让我们直接进入术语约定：
+
+- 记忆稳定性（memory stability）：一条记忆的回忆概率从 100% 下降到 90% 所需的时间
+- 记忆可提取性（memory retreivability）：一条记忆在某一时刻的回忆概率
+- 记忆难度（memory difficulty）：一条记忆内在的难度
+
+这里也精确地区分一下记忆可提取性和记忆保留的区别：前者专指某一条记忆的回忆概率，而后者是多条记忆整体的回忆概率均值。
+
+使用上述术语，我们可以定义任意一条记忆在 n 次复习成功后 t 时刻的记忆可提取性：
+
+$$
+R_n(t) = \exp(\cfrac{\ln 0.9 \cdot t}{S_n})
+$$
+
+通过这个式子，把 $S_n$ 转换为复习间隔，便可以将记忆算法和记忆模型联系起来：
+
+$$
+R_n(t) = \exp(\cfrac{\ln 0.9 \cdot t}{I_1\prod\limits_{i=2}^{n}C_i})
+$$
+
+其中：
+
+- $I_1$ 为第一次复习的间隔
+- $C_i$ 为第 $i$ 次复习间隔与第 $i-1$ 复习间隔之间的比值
+
+记忆算法的目标就是准确地计算 $I_1$ 和 $C_i$，这样就可以得到不同学生、不同材料、不同复习周期下的记忆稳定性，从而安排合理的复习间隔。
+
+回顾一下，SM-0 和 SM-2 的 $I_i$ 都是 1天。 SM-0 的 $C_i$  是一个预设值，不会变化；而 SM-2 的 $C_i$ 是简易度 EF，会随着用户的评分输入而发生变化，但每张卡片的 $C_i$  是相互独立的。SM-4 尝试打破这种独立，并在 SM-5 及之后的算法上被持续改进。
+
+问题来了，说了这么多， $C_i$ 跟记忆三变量有啥关系？
+
+大家不妨先自己思考一下，在每一次复习时，记忆的状态会怎样更新。
+
+以下是沃兹的一些实验结论（墨墨背单词的数据也能验证）：
+
+- 记忆稳定性的影响：当 $S$ 越高，$C_i$ 就越小。这意味着，记忆越稳定，记忆的进一步稳定就越来越困难。
+- 记忆可提取性的影响：当 $R$ 越低，$C_i$ 就越大。这意味着，回忆概率越低，回忆成功后的记忆稳定性就越大。
+- 记忆难度的影响：当 $D$ 越大，$C_i$ 就越小。这意味着，记忆材料难度越高，稳定性的增长就越小。
+
+由于存在上述多重因素的影响，$C_i$ 难以计算，SuperMemo 使用多维矩阵在表示 $C_i$ 的多变量函数，并在用户的学习过程中调整矩阵值，从而逼近真实情况。
+
+为了方便后续讨论，我们使用 SM-17 对 $C_i$ 的命名：记忆稳定性增长 SInc（Stability increase）。这个命名的含义是， $C_i$ 是重复前后记忆稳定性的增长倍数。
+
+接下来，就让我们详细介绍一下记忆稳定性增长。
+
 ### 记忆稳定性增长
 
+在本章中，我们暂时抛开记忆难度的影响，把注意力集中在记忆稳定性增长与稳定性、可提取性之间的关系上。
+
+#### 稳定性增长与记忆稳定性的关系
+
+在研究 SInc 矩阵，我们发现，给定 R，SInc 关于 S 的函数可以很好地用负幂函数描述
+
+![SInc as a function of S for constant R is excellently described with a negative power function](https://supermemo.guru/images/0/0e/SInc-vs-S.gif)
+
+![Log(SInc)-vs-log(S).gif](https://supermemo.guru/images/4/4e/Log%28SInc%29-vs-log%28S%29.gif)
+
+#### 稳定性增长与记忆可提取性的关系
+
+如间隔效应预测的那样，SInc 在 R 较小时更大。在研究多个数据集后，我们发现，当 R 减小时，SInc 呈指数增长。这种增加的幅度高于预期，进一步为间隔效应提供了证据。
+
+![SInc as a function of R for constant S can be quite well approximated with a negative exponential function](https://supermemo.guru/images/2/29/SInc-vs-R.gif)
+
+![SInc-vs-log(R).gif](https://supermemo.guru/images/b/b2/SInc-vs-log%28R%29.gif)
+
+令人感兴趣的是，SInc 在 R 为 100% 时可能低于 1。一些分子层面的研究表明，复习时记忆的不稳定性增加。这有一次证明了，反复死记硬背不仅会浪费更多时间，还会损害记忆。
+
+#### 由稳定性增长函数得出的结论
+
+##### 稳定性增长系数与时间呈线性关系
+
+![The graph of changes of SInc in time. This graph was generated for S=240 using Eqn. SInc2005](https://supermemo.guru/images/d/d0/SInc-vs-time.gif)
+
+R 随着 t 增加而指数下降，而 SInc 随着 R 下降而指数上升。两个指数相互抵消。
+
+##### 记忆稳定性的期望增长
+
+学习优化有各种标准，我们可以针对特定的保留率进行优化，或者最大化记忆稳定性(学习速度)。在这两种情况下，了解预期的稳定性增长都是有帮助的。
+
+我们将预期的稳定性增长定义为―$E(SInc) = SInc \times R$ 
+
+这产生了一个惊人的结果：当保留率在 30% - 40% 时我们达到了最快的学习速度：
+
+![Expected increase in memory stability E(SInc) as a function of retrievability R for stability S](https://supermemo.guru/images/c/ca/Consolidation_curve_E%28Sinc%29%3Df%28R%29_%282005%29.gif)
+
 ### 记忆复杂性
+
+记忆稳定性在间隔重复中取决于复习的质量，也就是记忆复杂度。为了有效复习，知识关联需要简单（即使知识本身是复杂的）。卡片可以构建出知识的复杂结构，但是独立的记忆卡片应该是原子的。
+
+在 2005 年我们找到了可以描述复杂记忆复习的公式。我们注意到：复杂记忆的稳定性就像电路里的电阻，并联电阻会使更多的电流通过。
+
+![Memory complexity: simple and complex memories](https://supermemo.guru/images/thumb/f/f5/Memory_complexity.png/450px-Memory_complexity.png)
+
+
+复杂的知识会产生两种影响：
+
+- 信息其他片段的干扰增加
+- 难以在复习时对记忆项目的子成分均匀刺激
+
+假设我们现在有一张复杂卡片，需要记忆这张卡片上的两个填空。并假设这两个空是同样难记的。那么复合记忆项目的记忆可提取性是其子项目记忆可提取性的乘积。
+
+- $R = R_a \times R_b$
+
+让我们代入遗忘曲线的公式
+
+- $R = exp\{\cfrac{-kt}{S_a}\} \times exp\{\cfrac{-kt}{S_b}\} = exp\{\cfrac{-kt}{S}\}$
+- 其中 S 是这个复杂卡片的稳定性
+
+那么由 $\cfrac{-kt}{S} = \cfrac{-kt}{S_a} + \cfrac{-kt}{S_b}$ 可得 $S = \cfrac{S_a \times S_b}{S_a + S_b}$
+
+即复杂项目的稳定性将比其两个子项目的稳定性还要低！并且数据证明，两个子项目的稳定性会趋同于较难的子项目的稳定性。
+
+当复杂性达到某种程度，将无法建立长期保留的记忆稳定性。简而言之，要记住整本书，除了不停地重读，别无他法。这是个徒劳的过程。
 
 ## Day 3 前沿进展
 
