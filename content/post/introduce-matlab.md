@@ -17,11 +17,11 @@ tags: ["数学"]
 
 了解 MATLAB 的历史，是有助于帮我们理解 MATLAB 的这款软件本身的优点和缺点
 
-实际上这段历史在 MATLAB 的官网上有创始人的个人陈述，在这里我讲截取一部分
+实际上这段历史在 MATLAB 的官网上有创始人的个人陈述，在这里我将截取一部分
 
-[MATLAB发展简史 - MATLAB & Simulink (mathworks.cn)](https://ww2.mathworks.cn/company/newsletters/articles/a-brief-history-of-MATLAB.html)
+[MATLAB发展简史 - MATLAB & Simulink (mathworks.cn)](https://ww2.mathworks.cn/company/newsletters/articles/a-brief-history-of-matlab.html)
 
-根据 MATLAB 创始人 Cleve Moler 本人所言
+根据 MATLAB 创始人 Cleve Moler 本人所言：
 
 > 在 70 年代和 80 年代初期，我在新墨西哥大学教授线性代数和数值分析。我希望我的学生能够方便地使用 LINPACK（数值线性代数的库，计算方程组，矩阵分解，矩阵乘法）和 EISPACK（计算特征值的 Fortran 库），而不必编写 Fortran 程序。我所说的“方便地使用”是指无需执行远程批处理和重复的编辑-编译-链接-加载-执行过程，而校园中央主机计算机一般需要执行这个过程。
 >
@@ -49,7 +49,7 @@ tags: ["数学"]
     ></orbit-prompt>
      <orbit-prompt
             question="初版 MATLAB 的可拓展性不好，需要用户获取源代码，编写子程序，并重新编译 MATLAB"
-            answer=""
+            answer="（阅读即可）"
     ></orbit-prompt>
 {{< /withorbit >}}
 
