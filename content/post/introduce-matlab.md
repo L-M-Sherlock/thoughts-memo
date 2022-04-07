@@ -71,20 +71,20 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
 
 [Mathematica 最新版本和旧版本历史 (wolfram.com)](https://www.wolfram.com/mathematica/quick-revision-history.html)
 
-> 1988年 6 月，Mathematica 首版发布
+> 1988 年 6 月，Mathematica 首版发布
 >
-> 1989年 8 月：支持远程内核
+> 1989 年 8 月：支持远程内核
 >
-> 1991年 1 月，增加功能：笔记本前端，数值常微分方程求解器，增加 ParametricPlot3D
+> 1991 年 1 月，增加功能：笔记本前端，数值常微分方程求解器，增加 ParametricPlot3D
 >
-> 1992年 6 月
+> 1992 年 6 月
 >
 > - Unix 平台的 WSTP（Wolfram Symbolic Transfer Protocol）增强功能和文档
 > - Macintosh 平台的 WSTP（Wolfram Symbolic Transfer Protocol）
 >
-> 1993年 6 月：具有新笔记本命令的 Windows 前端
+> 1993 年 6 月：具有新笔记本命令的 Windows 前端
 >
-> 1996年 9 月：交互式数学排版系统
+> 1996 年 9 月：交互式数学排版系统
 
 {{< withorbit >}}
     <orbit-prompt
@@ -111,11 +111,11 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
 
 python 实际上不是数学软件，他是一种编程语言，但是在拥有 numpy, pandas 等一系列的库后， python 就拥有了和 MATLAB, mathematica 这些商业软件掰掰手腕的能力 
 
-根据知乎用户 xue gy的回答  [MATLAB 在逐渐被 Python 淘汰吗？](https://www.zhihu.com/question/367881424/answer/2415598493)
+根据知乎用户 xue gy 的回答  [MATLAB 在逐渐被 Python 淘汰吗？](https://www.zhihu.com/question/367881424/answer/2415598493)
 
 在大部分的场景下， python 基本上都是会比 MATLAB 快的，特别在解微分方程上。
 
-## 那为什么我们使用MATLAB
+## 那为什么我们使用 MATLAB
 
 但这并不代表说 MATLAB 就一无用处，会被淘汰
 
