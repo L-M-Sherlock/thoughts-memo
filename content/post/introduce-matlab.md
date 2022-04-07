@@ -101,7 +101,7 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
     ></orbit-prompt>
 {{< /withorbit >}}
 
-我们可以发现,mathematica 讲所有的更新方向，都集中于交互，图像，笔记本上
+我们可以发现, mathematica 讲所有的更新方向，都集中于交互，图像，笔记本上
 
 所以说通常在使用上， mathematica 会比较的容易，而且 mathematica 的帮助文档的质量也是数一数二的，搭配上 wolfram 自家的 mathworld, 你甚至可以不看教材就可以学会数学
 
@@ -111,7 +111,7 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
 
 python 实际上不是数学软件，他是一种编程语言，但是在拥有 numpy, pandas 等一系列的库后， python 就拥有了和 matlab, mathematica 这些商业软件掰掰手腕的能力 
 
-根据知乎用户 xue gy的回答  [MATLAB在逐渐被 Python 淘汰吗？](https://www.zhihu.com/question/367881424/answer/2415598493)
+根据知乎用户 xue gy的回答  [MATLAB 在逐渐被 Python 淘汰吗？](https://www.zhihu.com/question/367881424/answer/2415598493)
 
 在大部分的场景下， python 基本上都是会比 matlab 快的，特别在解微分方程上。
 
@@ -122,7 +122,7 @@ python 实际上不是数学软件，他是一种编程语言，但是在拥有 
 
 {{< withorbit >}}
     <orbit-prompt
-            question="PC-matlab的发行时间"
+            question="PC-matlab 的发行时间"
             answer="上世纪 80 年年代(1984)"
     ></orbit-prompt>
 {{< /withorbit >}}
@@ -131,7 +131,7 @@ python 实际上不是数学软件，他是一种编程语言，但是在拥有 
 
 {{< withorbit >}}
     <orbit-prompt
-            question="matlab比 python 好在哪里"
+            question="matlab 比 python 好在哪里"
             answer="稳定性上"
     ></orbit-prompt>
 {{< /withorbit >}}
