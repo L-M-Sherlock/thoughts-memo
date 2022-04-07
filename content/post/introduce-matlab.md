@@ -1,5 +1,5 @@
 ---
-title: "认识 Matlab"
+title: "认识 MATLAB"
 date: 2022-03-31T11:53:12+08:00
 description: ""
 tags: ["数学"]
@@ -11,51 +11,51 @@ tags: ["数学"]
 
 许多人对进行解决数学问题的初映像，还停留在一个这么一个映像：一个人待在一个房间里，满屋子除了草稿纸不见他物，做题的人拿着纸币在草稿纸上疯狂的计算。实际上这跟我们的数学教育可能有一定的关系，由于需要参加考试，为了保证公平性，往往只允许使用一些比较初等的计算器，因此不少人将计算机和数学一分为二了。但实际上，随着科技的发展，许多的工作都可以由计算机完成，特别是面对数字量大，复杂度高的问题是，计算机更显得游刃有余。许多认为计算机无法完成的事情，计算机都可以帮你完成，例如求导，积分，解方程组。
 
-本文将着重介绍一下最常用的三个工具：matlab, mathematica, python
+本文将着重介绍一下最常用的三个工具：MATLAB, mathematica, python
 
-## matlab的历史
+## MATLAB 的历史
 
-了解 matlab 的历史，是有助于帮我们理解 matlab 的这款软件本身的优点和缺点
+了解 MATLAB 的历史，是有助于帮我们理解 MATLAB 的这款软件本身的优点和缺点
 
-实际上这段历史在 matlab 的官网上有创始人的个人陈述，在这里我讲截取一部分
+实际上这段历史在 MATLAB 的官网上有创始人的个人陈述，在这里我讲截取一部分
 
-[MATLAB发展简史 - MATLAB & Simulink (mathworks.cn)](https://ww2.mathworks.cn/company/newsletters/articles/a-brief-history-of-matlab.html)
+[MATLAB发展简史 - MATLAB & Simulink (mathworks.cn)](https://ww2.mathworks.cn/company/newsletters/articles/a-brief-history-of-MATLAB.html)
 
-根据 matlab 创始人 Cleve Moler 本人所言
+根据 MATLAB 创始人 Cleve Moler 本人所言
 
 > 在 70 年代和 80 年代初期，我在新墨西哥大学教授线性代数和数值分析。我希望我的学生能够方便地使用 LINPACK（数值线性代数的库，计算方程组，矩阵分解，矩阵乘法）和 EISPACK（计算特征值的 Fortran 库），而不必编写 Fortran 程序。我所说的“方便地使用”是指无需执行远程批处理和重复的编辑-编译-链接-加载-执行过程，而校园中央主机计算机一般需要执行这个过程。
 >
 > 因此，我研读了 Niklaus Wirth 的著作《*Algorithms + Data Structures = Programs*》，学习如何解析编程语言。我用 Fortran 编写了初版 MATLAB——矩阵实验室（Matrix Laboratory）的缩写，其数据类型只有矩阵。这个项目对我来说是兴趣爱好，也是我希望了解的编程新领域，并且可以给我的学生学习使用。那时候我没有任何正式的外部支持，当然也没有商业计划。
 >
-> 初版 matlab 只是一个交互式矩阵计算器。下面这个启动屏幕展示了所有保留的文字和函数，只有 71 个。要添加其他函数，用户必须从我这里获取源代码、编写 Fortran 子程序、在解析表里添加自己的函数名称，然后重新编译 MATLAB。
+> 初版 MATLAB 只是一个交互式矩阵计算器。下面这个启动屏幕展示了所有保留的文字和函数，只有 71 个。要添加其他函数，用户必须从我这里获取源代码、编写 Fortran 子程序、在解析表里添加自己的函数名称，然后重新编译 MATLAB。
 
 
 {{< withorbit >}}
     <orbit-prompt
-            question="初版的 matlab 主要解决什么数学问题"
+            question="初版的 MATLAB 主要解决什么数学问题"
             answer="矩阵的计算"
     ></orbit-prompt>
      <orbit-prompt
-            question="编写 matlab 的初衷是辅助学生使用什么程序"
+            question="编写 MATLAB 的初衷是辅助学生使用什么程序"
             answer="线性代数相关的 Fortran 库(回答 LINPACK, EISPACK 也可)"
     ></orbit-prompt>
     <orbit-prompt
-            question="matlab 辅助学生使用一些线性函数相关的 Fortran 库，其「辅助」指的是什么"
+            question="MATLAB 辅助学生使用一些线性函数相关的 Fortran 库，其「辅助」指的是什么"
             answer="省去远程批处理和编译等工作"
     ></orbit-prompt>
     <orbit-prompt
-            question="matlab 的全称是什么？"
+            question="MATLAB 的全称是什么？"
             answer="matrix laboratory"
     ></orbit-prompt>
      <orbit-prompt
-            question="初版 matlab 的可拓展性不好，需要用户获取源代码，编写子程序，并重新编译 matlab"
+            question="初版 MATLAB 的可拓展性不好，需要用户获取源代码，编写子程序，并重新编译 MATLAB"
             answer=""
     ></orbit-prompt>
 {{< /withorbit >}}
 
-在这里我要强调一下 matlab 的初版的用途：矩阵计算，在以后 matlab 的学习过程中，你会发现，矩阵计算一直是无法绕开的问题，因为 matlab 的基石便是矩阵计算。我们也可以看到初版 matlab 的成功正式因为其优秀的矩阵运算能力
+在这里我要强调一下 MATLAB 的初版的用途：矩阵计算，在以后 MATLAB 的学习过程中，你会发现，矩阵计算一直是无法绕开的问题，因为 MATLAB 的基石便是矩阵计算。我们也可以看到初版 MATLAB 的成功正式因为其优秀的矩阵运算能力
 
-> 1979-80学年我在斯坦福任教，在那里教授数值分析的研究生课程，并在课程中引入了这一矩阵计算器。一些学生也在学习控制理论和信号处理等课程，而我对这些内容一无所知。但是，这些课程涉及的数学以矩阵运算为核心，因此 matlab 迅速得到了学生的追捧。
+> 1979-80学年我在斯坦福任教，在那里教授数值分析的研究生课程，并在课程中引入了这一矩阵计算器。一些学生也在学习控制理论和信号处理等课程，而我对这些内容一无所知。但是，这些课程涉及的数学以矩阵运算为核心，因此 MATLAB 迅速得到了学生的追捧。
 
 这么优秀的软件最终在众人的帮助下开始商业化
 
@@ -105,40 +105,40 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
 
 所以说通常在使用上， mathematica 会比较的容易，而且 mathematica 的帮助文档的质量也是数一数二的，搭配上 wolfram 自家的 mathworld, 你甚至可以不看教材就可以学会数学
 
-同时我们也可以看到， mathematica 首次更新就增加了远程内核功能，也说明开发者本身，在开发的过程中，就并没有打算让用户在自己的电脑上完成所有的程序运算，这一点与 matlab 截然不同，因此我们也可以看到， mathematica 在对速度和内存的优化上，并没有下多大功夫
+同时我们也可以看到， mathematica 首次更新就增加了远程内核功能，也说明开发者本身，在开发的过程中，就并没有打算让用户在自己的电脑上完成所有的程序运算，这一点与 MATLAB 截然不同，因此我们也可以看到， mathematica 在对速度和内存的优化上，并没有下多大功夫
 
 ## python
 
-python 实际上不是数学软件，他是一种编程语言，但是在拥有 numpy, pandas 等一系列的库后， python 就拥有了和 matlab, mathematica 这些商业软件掰掰手腕的能力 
+python 实际上不是数学软件，他是一种编程语言，但是在拥有 numpy, pandas 等一系列的库后， python 就拥有了和 MATLAB, mathematica 这些商业软件掰掰手腕的能力 
 
 根据知乎用户 xue gy的回答  [MATLAB 在逐渐被 Python 淘汰吗？](https://www.zhihu.com/question/367881424/answer/2415598493)
 
-在大部分的场景下， python 基本上都是会比 matlab 快的，特别在解微分方程上。
+在大部分的场景下， python 基本上都是会比 MATLAB 快的，特别在解微分方程上。
 
-## 那为什么我们使用matlab
+## 那为什么我们使用MATLAB
 
-但这并不代表说 matlab 就一无用处，会被淘汰
+但这并不代表说 MATLAB 就一无用处，会被淘汰
 
 
 {{< withorbit >}}
     <orbit-prompt
-            question="PC-matlab 的发行时间"
+            question="PC-MATLAB 的发行时间"
             answer="上世纪 80 年年代(1984)"
     ></orbit-prompt>
 {{< /withorbit >}}
 
-正因为发行时间早，使用用户多，相应的在稳定性上 matlab 是有保证的，评论区中也提到 python 在画图的过程中有时会出问题，而且数据量大的时候会出现故障。
+正因为发行时间早，使用用户多，相应的在稳定性上 MATLAB 是有保证的，评论区中也提到 python 在画图的过程中有时会出问题，而且数据量大的时候会出现故障。
 
 {{< withorbit >}}
     <orbit-prompt
-            question="matlab 比 python 好在哪里"
+            question="MATLAB 比 python 好在哪里"
             answer="稳定性上"
     ></orbit-prompt>
 {{< /withorbit >}}
 
-matlab上的 simulink 现在更是 matlab 的最核心的功能，在控制系统建模、仿真上广泛的应用，这种应用是通常是无法替代的。试想一下，飞机上的控制功能软件，是使用虽然慢但是稳定的 matlab 好呢，还是使用快但是可能出问题的 python 呢？
+MATLAB上的 simulink 现在更是 MATLAB 的最核心的功能，在控制系统建模、仿真上广泛的应用，这种应用是通常是无法替代的。试想一下，飞机上的控制功能软件，是使用虽然慢但是稳定的 MATLAB 好呢，还是使用快但是可能出问题的 python 呢？
 
-而且 python 上的帮助文档是不如 matlab 来的有序的，这也给上手的人带来了巨大的麻烦
+而且 python 上的帮助文档是不如 MATLAB 来的有序的，这也给上手的人带来了巨大的麻烦
 
 ## 关于mathematica
 
@@ -151,7 +151,7 @@ matlab上的 simulink 现在更是 matlab 的最核心的功能，在控制系�
     ></orbit-prompt>
 {{< /withorbit >}}
 
-## 为什么我要写 matlab 教程
+## 为什么我要写 MATLAB 教程
 
 因为考试要考(逃)
 
