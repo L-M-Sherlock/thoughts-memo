@@ -272,7 +272,7 @@ SM-4 的主要目标是改善 SM-2 适应能力低下的问题。虽然 SM-2 能
     ></orbit-prompt>
 {{< /withorbit >}}
 
-### 小节
+### 小结
 
 1885 年发明的遗忘曲线刻画了记忆与遗忘，而 1985 年的间隔重复致力于寻找最佳的复习安排。本节介绍了经验算法的三步走：
 
@@ -420,17 +420,42 @@ $$
 
 接下来，就让我们详细介绍一下记忆稳定性增长。
 
+{{< withorbit >}}
+    <orbit-prompt
+            question="记忆三变量模型包含了哪三个变量？"
+            answer="记忆稳定性、记忆可提取性、记忆难度"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="记忆可提取性和记忆保留率的区别是什么？"
+            answer="前者是记忆个体的性质，后者是记忆总体的性质"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="记忆三变量模型和记忆算法之间联系的桥梁是哪两个参数？"
+            answer="初始间隔$I_1$和连续两个间隔之间的比值$C_i$"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="$C_i$的命名是？"
+            answer="记忆稳定性增长"
+    ></orbit-prompt>
+{{< /withorbit >}}
+
 ### 记忆稳定性增长
 
 在本章中，我们暂时抛开记忆难度的影响，把注意力集中在记忆稳定性增长与稳定性、可提取性之间的关系上。
 
+下述数据由 SuperMemo 用户提供，沃兹通过控制变量和线性回归来分析这些变量之间的关系。
+
 #### 稳定性增长与记忆稳定性的关系
 
-在研究 SInc 矩阵，我们发现，给定 R，SInc 关于 S 的函数可以很好地用负幂函数描述
+在研究 SInc 矩阵，我们发现，给定 R，SInc 关于 S 的函数可以很好地用负幂函数描述：
 
 ![SInc as a function of S for constant R is excellently described with a negative power function](https://supermemo.guru/images/0/0e/SInc-vs-S.gif)
 
+对稳定性增长（Y轴）和稳定性（X轴）分别取对数，得到下图：
+
 ![Log(SInc)-vs-log(S).gif](https://supermemo.guru/images/4/4e/Log%28SInc%29-vs-log%28S%29.gif)
+
+这与此前「当 $S$ 越高，$C_i$ 就越小」的定性结论一致，并在函数性质上有了更细致的刻画。
 
 #### 稳定性增长与记忆可提取性的关系
 
@@ -438,63 +463,123 @@ $$
 
 ![SInc as a function of R for constant S can be quite well approximated with a negative exponential function](https://supermemo.guru/images/2/29/SInc-vs-R.gif)
 
+对可提取性（X轴）取对数，得到下图：
+
 ![SInc-vs-log(R).gif](https://supermemo.guru/images/b/b2/SInc-vs-log%28R%29.gif)
 
 令人感兴趣的是，SInc 在 R 为 100% 时可能低于 1。一些分子层面的研究表明，复习时记忆的不稳定性增加。这有一次证明了，反复死记硬背不仅会浪费更多时间，还会损害记忆。
 
 #### 由稳定性增长函数得出的结论
 
+根据以上基本规律，我们通过组合、变换视角等方式，便可推导出更多有意思的结论。
+
 ##### 稳定性增长系数与时间呈线性关系
 
 ![The graph of changes of SInc in time. This graph was generated for S=240 using Eqn. SInc2005](https://supermemo.guru/images/d/d0/SInc-vs-time.gif)
 
-R 随着 t 增加而指数下降，而 SInc 随着 R 下降而指数上升。两个指数相互抵消。
+R 随着 t 增加而指数下降，而 SInc 随着 R 下降而指数上升。两个指数相互抵消，从而得到一条近似线性的曲线。
 
 ##### 记忆稳定性的期望增长
 
 学习优化有各种标准，我们可以针对特定的保留率进行优化，或者最大化记忆稳定性(学习速度)。在这两种情况下，了解预期的稳定性增长都是有帮助的。
 
-我们将预期的稳定性增长定义为―$E(SInc) = SInc \times R$ 
+我们将预期的稳定性增长定义为
 
-这产生了一个惊人的结果：当保留率在 30% - 40% 时我们达到了最快的学习速度：
+$$E(SInc) = SInc \times R$$
+
+这产生了一个惊人的结果：当保留率在 30% ～ 40% 时我们达到了最快的学习速度：
 
 ![Expected increase in memory stability E(SInc) as a function of retrievability R for stability S](https://supermemo.guru/images/c/ca/Consolidation_curve_E%28Sinc%29%3Df%28R%29_%282005%29.gif)
+
+{{< withorbit >}}
+    <orbit-prompt
+            question="稳定性增长与记忆稳定性的关系可用什么函数刻画？"
+            answer="负幂函数"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="稳定性增长与记忆可提取性的关系可用什么函数刻画？"
+            answer="指数函数"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 ### 记忆复杂性
 
 记忆稳定性在间隔重复中取决于复习的质量，也就是记忆复杂度。为了有效复习，知识关联需要简单（即使知识本身是复杂的）。卡片可以构建出知识的复杂结构，但是独立的记忆卡片应该是原子的。
 
-在 2005 年我们找到了可以描述复杂记忆复习的公式。我们注意到：复杂记忆的稳定性就像电路里的电阻，并联电阻会使更多的电流通过。
+在 2005 年我们找到了可以描述复合\*记忆复习的公式。我们注意到：复合记忆的稳定性就像电路里的电阻，并联电阻会使更多的电流通过。（注：等同于复杂，但复合凸显出其由简单部分组成的本质，所以下文都用复合来代替复杂）
 
 ![Memory complexity: simple and complex memories](https://supermemo.guru/images/thumb/f/f5/Memory_complexity.png/450px-Memory_complexity.png)
 
-
-复杂的知识会产生两种影响：
+复合的知识会产生两种影响：
 
 - 信息其他片段的干扰增加
-- 难以在复习时对记忆项目的子成分均匀刺激
+- 难以在复习时对记忆的子成分均匀刺激
 
-假设我们现在有一张复杂卡片，需要记忆这张卡片上的两个填空。并假设这两个空是同样难记的。那么复合记忆项目的记忆可提取性是其子项目记忆可提取性的乘积。
+假设我们现在有一张复合卡片，需要记忆这张卡片上的两个填空。并假设这两个空是同样难记的。那么复合记忆的可提取性是其子记忆可提取性的乘积。
 
-- $R = R_a \times R_b$
+$$
+R = R_a \times R_b
+$$
 
 让我们代入遗忘曲线的公式
 
-- $R = exp\{\cfrac{-kt}{S_a}\} \times exp\{\cfrac{-kt}{S_b}\} = exp\{\cfrac{-kt}{S}\}$
-- 其中 S 是这个复杂卡片的稳定性
+$$
+R = exp\{\cfrac{-kt}{S_a}\} \times exp\{\cfrac{-kt}{S_b}\} = exp\{\cfrac{-kt}{S}\}
+$$
 
-那么由 $\cfrac{-kt}{S} = \cfrac{-kt}{S_a} + \cfrac{-kt}{S_b}$ 可得 $S = \cfrac{S_a \times S_b}{S_a + S_b}$
+其中 S 是这个复合记忆的稳定性。那么由 
 
-即复杂项目的稳定性将比其两个子项目的稳定性还要低！并且数据证明，两个子项目的稳定性会趋同于较难的子项目的稳定性。
+$$
+\cfrac{-kt}{S} = \cfrac{-kt}{S_a} + \cfrac{-kt}{S_b}
+$$
+
+可得 
+
+$$
+S = \cfrac{S_a \times S_b}{S_a + S_b}
+$$
+
+即复合记忆的稳定性将比其两个子记忆的稳定性还要低！并且数据证明，两个子记忆的稳定性会趋同于较难的子记忆的稳定性。
 
 当复杂性达到某种程度，将无法建立长期保留的记忆稳定性。简而言之，要记住整本书，除了不停地重读，别无他法。这是个徒劳的过程。
 
+{{< withorbit >}}
+    <orbit-prompt
+            question="复合记忆的可提取性与其子记忆的可提取性之间存在什么关系？"
+            answer="$R = R_a \times R_b$ 复合记忆的可提取性是其子记忆的可提取性之积"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="复合记忆的稳定性与其子记忆的稳定性之间的大小关系是？"
+            answer="复合记忆的稳定性小于其所有子记忆的稳定性"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="随着复合记忆的子记忆越多，复合的记忆稳定性会如何变化？"
+            answer="越来越小，趋近于0"
+    ></orbit-prompt>
+{{< /withorbit >}}
+
 ## Day 3 前沿进展
+
+在学习了记忆的一些理论之后，该好好将它们用起来了。接下来的前沿进展，将会介绍墨墨是如何应用这些记忆理论，研发自己的记忆算法，提高用户的记忆效率。
 
 ### 数据收集
 
+数据是记忆算法的源头活水，没有数据，巧妇也难为无米之炊。收集合适、全面、精确的数据，将决定记忆算法的上限。
+
+为了精准的刻画学习者的记忆情况，我们需要定义出记忆的基本行为。先让我们思考一下，一个记忆行为，包含哪些重要属性？
+
+最基本的要素很容易想到：谁（行为主体）何时（时间）做了什么事（记忆）。对于记忆，我们又可以继续挖掘：记了什么（内容）、记得怎么样（反馈）、花了多久（成本）等等。
+
+考虑到这些属性之后，我们便可用一个元组来记录一条记忆行为事件：
+$$
+e:=(user,item,time,response,cost)
+$$
+
+
 ### DSR模型
 
-### SSP-MMC算法
+### SRS模拟器
+
+### MMC算法
 
 ## 总结
