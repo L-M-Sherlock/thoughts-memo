@@ -23,7 +23,7 @@ tags: ["数学"]
 
 根据matlab创始人Cleve Moler本人所言
 
-> 在70年代和80年代初期，我在新墨西哥大学教授线性代数和数值分析。我希望我的学生能够方便地使用LINPACK和EISPACK，而不必编写Fortran程序。我所说的“方便地使用”是指无需执行远程批处理和重复的编辑-编译-链接-加载-执行过程，而校园中央主机计算机一般需要执行这个过程。
+> 在70年代和80年代初期，我在新墨西哥大学教授线性代数和数值分析。我希望我的学生能够方便地使用LINPACK（数值线性代数的库，计算方程组，矩阵分解，矩阵乘法）和EISPACK（计算特征值的 Fortran 库），而不必编写Fortran程序。我所说的“方便地使用”是指无需执行远程批处理和重复的编辑-编译-链接-加载-执行过程，而校园中央主机计算机一般需要执行这个过程。
 >
 > 因此，我研读了Niklaus Wirth的著作《*Algorithms + Data Structures = Programs*》，学习如何解析编程语言。我用Fortran编写了初版MATLAB——矩阵实验室（Matrix Laboratory）的缩写，其数据类型只有矩阵。这个项目对我来说是兴趣爱好，也是我希望了解的编程新领域，并且可以给我的学生学习使用。那时候我没有任何正式的外部支持，当然也没有商业计划。
 >
@@ -32,12 +32,24 @@ tags: ["数学"]
 
 {{< withorbit >}}
     <orbit-prompt
-            question="初版的matlab是干什么用的"
-            answer="交互式矩阵计算器"
+            question="初版的 matlab 主要解决什么数学问题"
+            answer="矩阵的计算"
+    ></orbit-prompt>
+     <orbit-prompt
+            question="编写 matlab 的初衷是辅助学生使用什么程序"
+            answer="线性代数相关的 Fortran 库(回答 LINPACK, EISPACK 也可)"
     ></orbit-prompt>
     <orbit-prompt
-            question="初版的matlab的全程"
+            question="matlab 辅助学生使用一些线性函数相关的 Fortran 库，其「辅助」指的是什么"
+            answer="省去远程批处理和编译等工作"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="matlab 的全称是什么？"
             answer="matrix laboratory"
+    ></orbit-prompt>
+     <orbit-prompt
+            question="初版 matlab 的可拓展性不好，需要用户获取源代码，编写子程序，并重新编译 matlab"
+            answer=""
     ></orbit-prompt>
 {{< /withorbit >}}
 
