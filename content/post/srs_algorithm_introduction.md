@@ -524,13 +524,13 @@ $$
 让我们代入遗忘曲线的公式
 
 $$
-R = exp\{\cfrac{-kt}{S_a}\} \times exp\{\cfrac{-kt}{S_b}\} = exp\{\cfrac{-kt}{S}\}
+R = \exp\{\cfrac{t\ln 0.9}{S_a}\} \times \exp\{\cfrac{t\ln 0.9}{S_b}\} = \exp\{\cfrac{t\ln 0.9}{S}\}
 $$
 
 其中 S 是这个复合记忆的稳定性。那么由 
 
 $$
-\cfrac{-kt}{S} = \cfrac{-kt}{S_a} + \cfrac{-kt}{S_b}
+\cfrac{t\ln 0.9}{S} = \cfrac{t\ln 0.9}{S_a} + \cfrac{t\ln 0.9}{S_b}
 $$
 
 可得 
@@ -545,11 +545,11 @@ $$
 
 {{< withorbit >}}
     <orbit-prompt
-            question="复合记忆的可提取性与其子记忆的可提取性之间存在什么关系？"
+            question="复合记忆的可提取性$R$与其子记忆的可提取性$R_a,R_b$之间存在什么关系？"
             answer="$R = R_a \times R_b$ 复合记忆的可提取性是其子记忆的可提取性之积"
     ></orbit-prompt>
     <orbit-prompt
-            question="复合记忆的稳定性与其子记忆的稳定性之间的大小关系是？"
+            question="复合记忆的稳定性$S$与其子记忆的稳定性$S_a,S_b$之间的大小关系是？"
             answer="复合记忆的稳定性小于其所有子记忆的稳定性"
     ></orbit-prompt>
     <orbit-prompt

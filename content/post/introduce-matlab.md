@@ -3,7 +3,6 @@ title: "认识 Matlab"
 date: 2022-03-31T11:53:12+08:00
 description: ""
 tags: ["数学"]
-draft: true
 ---
 
 本文将在知乎同步更新，但在本网站上将搭配助记媒介进行
@@ -30,13 +29,17 @@ draft: true
 >
 > 初版MATLAB只是一个交互式矩阵计算器。下面这个启动屏幕展示了所有保留的文字和函数，只有71个。要添加其他函数，用户必须从我这里获取源代码、编写Fortran子程序、在解析表里添加自己的函数名称，然后重新编译MATLAB。
 
-q:初版的matlab是干什么用的
 
-a:交互式矩阵计算器
-
-q:初版的matlab的全程
-
-a:matrix laboratory
+{{< withorbit >}}
+    <orbit-prompt
+            question="初版的matlab是干什么用的"
+            answer="交互式矩阵计算器"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="初版的matlab的全程"
+            answer="matrix laboratory"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 在这里我要强调一下matlab的初版的用途：矩阵计算，在以后matlab的学习过程中，你会发现，矩阵计算一直是无法绕开的问题，因为matlab的基石便是矩阵计算。我们也可以看到初版matlab的成功正式因为其优秀的矩阵运算能力
 
@@ -71,17 +74,20 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
 >
 > 1996年9月：交互式数学排版系统
 
-q:初版mathematica发布时间
-
-a:1988年(80年代末)
-
-q:mathematica更新较多的内容是
-
-a：笔记本
-
-q:1989年8月发布的新功能（第一次更新中增加的功能）
-
-a:远程内核
+{{< withorbit >}}
+    <orbit-prompt
+            question="初版mathematica发布时间"
+            answer="1988年(80年代末)"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="mathematica更新较多的内容是"
+            answer="笔记本"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="1989年8月发布的新功能（第一次更新中增加的功能）"
+            answer="远程内核"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 我们可以发现,mathematica讲所有的更新方向，都集中于交互，图像，笔记本上
 
@@ -101,15 +107,22 @@ python实际上不是数学软件，他是一种编程语言，但是在拥有nu
 
 但这并不代表说matlab就一无用处，会被淘汰
 
-q:PC-matlab的发行时间
 
-a:上世纪80年年代(1984)
+{{< withorbit >}}
+    <orbit-prompt
+            question="PC-matlab的发行时间"
+            answer="上世纪80年年代(1984)"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 正因为发行时间早，使用用户多，相应的在稳定性上matlab是有保证的，评论区中也提到python在画图的过程中有时会出问题，而且数据量大的时候会出现故障。
 
-q:matlab比python好在哪里
-
-a:稳定性上
+{{< withorbit >}}
+    <orbit-prompt
+            question="matlab比python好在哪里"
+            answer="稳定性上"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 matlab上的simulink现在更是matlab的最核心的功能，在控制系统建模、仿真上广泛的应用，这种应用是通常是无法替代的。试想一下，飞机上的控制功能软件，是使用虽然慢但是稳定的matlab好呢，还是使用快但是可能出问题的python呢？
 
@@ -119,9 +132,12 @@ matlab上的simulink现在更是matlab的最核心的功能，在控制系统建
 
 实际上我本人是很喜欢mathematica，语言的简洁易用，特别详尽的帮助文档（甚至可以说是教科书级别），上手难度非常低（mathematica的函数非常多，基本上涵盖了数学的方方面面），而且mathematica在符号计算上的能力是非常强的，可以直接把未知数放进方程中直接进行计算，像学生比较头疼的不定积分，微分方程解析解，都可以直接算出来，不过遗憾的是，他的应用的场景还比较少，同时计算的也比较慢一些，所以说本人通常将mathematica当草稿纸使用，在一些不太确定的情况下利用mathematica进行验算。后期我也会写关于mathematica的教程
 
-q:mathematica什么计算上的能力很强
-
-a:符号计算
+{{< withorbit >}}
+    <orbit-prompt
+            question="mathematica什么计算上的能力很强"
+            answer="符号计算"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 ## 为什么我要写matlab教程
 
