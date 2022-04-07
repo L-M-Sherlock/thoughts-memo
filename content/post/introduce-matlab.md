@@ -86,7 +86,15 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
 >
 > 1996 年 9 月：交互式数学排版系统
 
-（注：笔记本是一种自然语言和代码混杂，形成一份文档的编程环境，广泛应用于数据科学等领域的分析工作）
+（注：笔记本是一种代码与文字交织，互动性较好的计算媒介，在科学研究中广泛使用。常见的笔记本有 Jupyter Notebook, Mathematica 内置的笔记本等。更多可参考[维基百科](https://en.wikipedia.org/wiki/Notebook_interface)）
+
+
+
+我们可以发现, mathematica 所有的更新方向，都集中于交互，图像，笔记本上。
+
+所以说通常在使用上， mathematica 会比较容易，而且 mathematica 的帮助文档的质量也是数一数二的，搭配上 wolfram 自家的 mathworld, 你甚至可以不看教材就可以学会数学。
+
+同时我们也可以看到， mathematica 首次更新就增加了远程内核功能，也说明开发者，在开发的过程中，就并没有打算让用户在自己的电脑上完成所有的程序运算，这一点与 MATLAB 截然不同，因此我们也可以看到， mathematica 在对速度和内存的优化上，并没有下多大功夫。
 
 {{< withorbit >}}
     <orbit-prompt
@@ -94,20 +102,22 @@ mathematica在网络上就比较难找了（特别是中文互联网），许多
             answer="1988年(80年代末)"
     ></orbit-prompt>
     <orbit-prompt
-            question="mathematica 更新较多的内容是"
+            question="mathematica 更新较多的功能是"
             answer="笔记本"
     ></orbit-prompt>
     <orbit-prompt
-            question="1989 年 8 月发布的新功能（第一次更新中增加的功能）"
-            answer="远程内核"
+            question="mathematica 更新笔记本比较多。此处笔记本指什么"
+            answer="代码与文字交织，互动性较好的计算媒介"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="mathematica 于 1989 年 8 月发布了远程内核"
+            answer="（阅读正面即可）"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="mathematica 易于使用，这点体现在哪两个方面"
+            answer="注重笔记本等交互体验；帮助文档质量高"
     ></orbit-prompt>
 {{< /withorbit >}}
-
-我们可以发现, mathematica 所有的更新方向，都集中于交互，图像，笔记本上。
-
-所以说通常在使用上， mathematica 会比较容易，而且 mathematica 的帮助文档的质量也是数一数二的，搭配上 wolfram 自家的 mathworld, 你甚至可以不看教材就可以学会数学。
-
-同时我们也可以看到， mathematica 首次更新就增加了远程内核功能，也说明开发者，在开发的过程中，就并没有打算让用户在自己的电脑上完成所有的程序运算，这一点与 MATLAB 截然不同，因此我们也可以看到， mathematica 在对速度和内存的优化上，并没有下多大功夫。
 
 ## python
 
@@ -129,18 +139,20 @@ python 实际上不是数学软件，他是一种编程语言，但是在拥有 
     ></orbit-prompt>
 {{< /withorbit >}}
 
-正因为发行时间早，使用用户多，相应的在稳定性上 MATLAB 是有保证的，评论区中也提到 python 在画图的过程中有时会出问题，而且数据量大的时候会出现故障。
+正因为发行时间早，使用用户多，久经考验，在稳定性上 MATLAB 是有保证的，评论区中也提到 python 在画图的过程中有时会出问题，而且数据量大的时候会出现故障。
 
-{{< withorbit >}}
-    <orbit-prompt
-            question="MATLAB 比 python 好在哪里"
-            answer="稳定性上"
-    ></orbit-prompt>
-{{< /withorbit >}}
 
 MATLAB上的 simulink 现在更是 MATLAB 的最核心的功能，在控制系统建模、仿真上广泛的应用，这种应用是通常是无法替代的。试想一下，飞机上的控制功能软件，是使用虽然慢但是稳定的 MATLAB 好呢，还是使用快但是可能出问题的 python 呢？
 
 而且 python 上的帮助文档是不如 MATLAB 来的有序的，这也给上手的人带来了巨大的麻烦
+
+
+{{< withorbit >}}
+    <orbit-prompt
+            question="MATLAB 比 python 好在哪里"
+            answer="稳定性，帮助文档，一些特别功能（simulink）"
+    ></orbit-prompt>
+{{< /withorbit >}}
 
 ## 关于mathematica
 
