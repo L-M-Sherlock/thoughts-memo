@@ -1,5 +1,5 @@
-baseURL = "https://l-m-sherlock.github.io/githubpages_withorbit/"
-title = "Spaced Repetition in Mnemonic Medium"
+baseURL = "https://l-m-sherlock.github.io/thoughts-memo/"
+title = "Thoughts Memo"
 
 theme = "fuji"
 hasCJKLanguage = true
@@ -32,11 +32,11 @@ post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 
 [params]
 author = "Jarrett Ye"                # You can also set author in post front matter individually
-subTitle = "用助记媒介，介绍间隔重复！"
+subTitle = "探索思想工具"
 defaultTheme = "auto"              # default theme when first visit (auto|dark|light)
 
 # Source URL of the website, will appear in the footer
-sourceURL = "https://github.com/L-M-Sherlock/githubpages_withorbit"
+sourceURL = "https://github.com/L-M-Sherlock/thoughts-memo"
 
 # Use CloudFlare Workers to accelerate the Google Analytics
 # If you are using this please comment the googleAnalytics above
@@ -64,8 +64,8 @@ copyrightStartYear = "2022"
 
 # Open Graph & Twitter Card variables
 # You can also set description and images in post front matter individually
-description = "Introduce spaced repetition via mnemonic medium."
-og = "/githubpages_withorbit/og.png"                                          # This will use the image called og.png in static/img folder
+description = "探索思想工具"
+og = "/thoughts-memo/og.png"                                          # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
 mainSections = ["post"]
@@ -79,7 +79,7 @@ licenseLink = "http://creativecommons.org/licenses/by-nc-sa/4.0/"
 
 # Comments
 # utterances, see: https://utteranc.es/
-utterancesRepo = "L-M-Sherlock/githubpages_withorbit"
+utterancesRepo = "L-M-Sherlock/thoughts-memo"
 utterancesIssueTerm = "pathname"
 
 # Disqus, see: https://disqus.com/admin/install/platforms/universalcode/
