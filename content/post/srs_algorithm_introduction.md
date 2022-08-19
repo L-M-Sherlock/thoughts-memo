@@ -218,22 +218,22 @@ SM-2 算法将复习反馈引入到间隔安排中，复习的反馈在一定程
 2. 引入简易度与评分，使算法有了一定的适应能力，能够根据学习者的反馈调整未来的复习规划。
 
 {{< withorbit >}}
-​    <orbit-prompt
-​            question="为什么复习时被遗忘的内容，不应该安排更长的间隔？"
-​            answer="被遗忘的内容，其遗忘速度没有减缓"
-​    ></orbit-prompt>
-​    <orbit-prompt
-​            question="什么现象指出了材料之间存在难度差异？"
-​            answer="由那些被忘记的材料所组成的笔记页面，遗忘率更高"
-​    ></orbit-prompt>
-​    <orbit-prompt
-​            question="SM-2引入简易度和回忆评分的作用是什么？"
-​            answer="让算法能根据学习者的反馈来调整单张卡片的复习规划"
-​    ></orbit-prompt>
-​    <orbit-prompt
-​            question="对笔记页面进行更细粒度的分离，对复习安排有什么好处？"
-​            answer="能更早地分离不同难度的材料的复习周期"
-​    ></orbit-prompt>
+    <orbit-prompt
+            question="为什么复习时被遗忘的内容，不应该安排更长的间隔？"
+            answer="被遗忘的内容，其遗忘速度没有减缓"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="什么现象指出了材料之间存在难度差异？"
+            answer="由那些被忘记的材料所组成的笔记页面，遗忘率更高"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="SM-2引入简易度和回忆评分的作用是什么？"
+            answer="让算法能根据学习者的反馈来调整单张卡片的复习规划"
+    ></orbit-prompt>
+    <orbit-prompt
+            question="对笔记页面进行更细粒度的分离，对复习安排有什么好处？"
+            answer="能更早地分离不同难度的材料的复习周期"
+    ></orbit-prompt>
 {{< /withorbit >}}
 
 ### SM-4
