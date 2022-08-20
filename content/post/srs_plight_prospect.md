@@ -13,9 +13,9 @@ draft: true
 
 # 研究进展
 
-![中文信息学报](../../static/中文信息学报.png)
+![中文信息学报](/thoughts-memo/中文信息学报.png)
 
-![SIGKDD](../../static/SIGKDD.png)
+![SIGKDD](/thoughts-memo/SIGKDD.png)
 
 去年 10 月份，我投出了人生中的第一份论文，并被中文信息学报录用，这篇论文是关于长期记忆预测的。然后是今年 2 月份，我投出了第一篇英文论文，还在 SIGKDD 的审稿周期中，这篇论文是关于间隔重复调度优化的。目前我正在写我的第三篇论文，算是对前两份工作的整合，这也是未来一个月我会闭关的原因之一。
 
@@ -50,7 +50,7 @@ draft: true
 
 对于 3 的回答是：对于天天都用的知识而言，确实很难忘记。但在创造性的工作中，我们需要的知识往往来自多个学科，并且包含大量细节。如果我们不间隔重复，我们真的就会忘记这些知识。
 
-对于 4 的回答是：就我个人经验而言，是可以的，我平时写论文和做实验设计，大量依赖于我在间隔重复中记住的相关知识。当然个人经验的说服力并不大，感兴趣的朋友可以看这篇论文：[Butler - 2010 - Repeated Testing Produces Superior Transfer of Learning Relative to Repeated.pdf (andymatuschak.org)](https://andymatuschak.org/files/Butler - 2010 - Repeated Testing Produces Superior Transfer of Learning Relative to Repeated.pdf)。但这些知识的迁移性也受到知识表述的限制。
+对于 4 的回答是：就我个人经验而言，是可以的，我平时写论文和做实验设计，大量依赖于我在间隔重复中记住的相关知识。当然个人经验的说服力并不大，感兴趣的朋友可以看这篇论文：[Butler - 2010 - Repeated Testing Produces Superior Transfer of Learning Relative to Repeated.pdf (andymatuschak.org)](https://andymatuschak.org/files/Butler%20-%202010%20-%20Repeated%20Testing%20Produces%20Superior%20Transfer%20of%20Learning%20Relative%20to%20Repeated.pdf)。但这些知识的迁移性也受到知识表述的限制。
 
 看起来这些问题都能回答，那么困境究竟在哪里呢？
 
