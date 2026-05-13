@@ -1,0 +1,17 @@
+{{- $description := "" -}}
+{{- if .Description -}}
+  {{- $description = .Description -}}
+{{- else if .Params.description -}}
+  {{- $description = .Params.description -}}
+{{- else if and .IsPage .Summary -}}
+  {{- $description = .Summary -}}
+{{- else if .Site.Params.description -}}
+  {{- $description = .Site.Params.description -}}
+{{- end -}}
+{{- $description = $description | plainify | htmlUnescape -}}
+{{- $description = replaceRE "\\s+" " " $description -}}
+{{- $description = replaceRE "^\\s+|\\s+$" "" $description -}}
+{{- if gt (len $description) 160 -}}
+  {{- $description = truncate 160 $description -}}
+{{- end -}}
+{{- return $description -}}

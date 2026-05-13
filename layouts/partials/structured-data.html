@@ -1,0 +1,37 @@
+{{- if and .IsPage (eq .Section "post") -}}
+{{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+{{- $description := partial "seo-description.html" . -}}
+{{- $authorName := .Params.author | default .Site.Params.author | default .Site.Title -}}
+{{- $datePublished := .PublishDate -}}
+{{- if $datePublished.IsZero -}}
+  {{- $datePublished = .Date -}}
+{{- end -}}
+{{- $dateModified := .Lastmod -}}
+{{- if $dateModified.IsZero -}}
+  {{- $dateModified = $datePublished -}}
+{{- end -}}
+{{- $image := "" -}}
+{{- with .Params.image -}}
+  {{- $image = . | absURL -}}
+{{- else -}}
+  {{- with .Site.Params.og -}}
+    {{- $image = . | absURL -}}
+  {{- end -}}
+{{- end -}}
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@type" "Article"
+  "headline" .Title
+  "description" $description
+  "author" (dict "@type" "Person" "name" $authorName)
+  "datePublished" ($datePublished.Format $iso8601)
+  "dateModified" ($dateModified.Format $iso8601)
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+  "url" .Permalink
+  "isPartOf" (dict "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL)
+-}}
+{{- with $image -}}
+  {{- $schema = merge $schema (dict "image" (slice .)) -}}
+{{- end -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}
